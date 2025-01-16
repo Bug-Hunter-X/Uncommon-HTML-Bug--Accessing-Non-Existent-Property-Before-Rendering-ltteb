@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Use DOMContentLoaded event to wait for the page to be fully parsed
+    document.addEventListener('DOMContentLoaded', function() {
+      let element = document.getElementById("myDiv");
+      // Check if the element exists before attempting to access its properties
+      if (element) {
+        // Add a property to the element to avoid the error.
+        element.myProperty = "exists";
+        console.log(element.myProperty);
+      } else {
+        console.error("Element not found");
+      }
+    });
+  </script>
+</body>
+</html>
