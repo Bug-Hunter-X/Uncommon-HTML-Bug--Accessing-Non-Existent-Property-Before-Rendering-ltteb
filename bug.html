@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Attempting to access a non-existent property of an element
+    // before it has been fully rendered
+    let element = document.getElementById("myDiv");
+    console.log(element.nonExistentProperty);
+  </script>
+</body>
+</html>
